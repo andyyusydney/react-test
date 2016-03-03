@@ -1,30 +1,21 @@
 import React, { Component } from 'react'
-import ListItem from './ListItem'
+import ArticlesList from './ArticlesList'
+import { connect } from 'react-redux'
 
 class App extends Component {
-  
-  constructor(props, context) {
-    super(props, context)
-    this.state = {
-      'item': {
-			id: 1,
-			title: "article title 1",
-			image: "http://placehold.it/300x250&text=image 1"
-		}
-    }
-  }
-  
   render() {
     return (
 		<div>
 			<h1>This is a React Test</h1>
-			<ul>
-				<ListItem item={this.state.item}/>
-			</ul>
+			<ArticlesList dispatch={this.props.dispatch} articles={this.props.articles} />
 		</div>	
 	)
   }
 
 }
 
-export default App
+function mapStateToProps(state) {
+	return state
+}
+
+export default connect(mapStateToProps)(App)
