@@ -1,25 +1,8 @@
 import React, { Component } from 'react'
 import ListItem from './ListItem'
 
-
 class ArticlesList extends Component {
-	/*
-  constructor(props, context) {
-    super(props, context)
-    this.state = {
-      articles: [
-	   {
-			id: 1,
-			title: "article title 1",
-			image: "http://placehold.it/300x250&text=image 1"
-		}
-	  ]
-    }
-  }
-  */
   
-  
-	  
   loadMore() {
 	  let moreArticles = [
 	   {

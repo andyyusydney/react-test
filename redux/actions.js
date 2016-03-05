@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch'
 
 let actions = {
 	loadMore: function(articlesList, pageNum) {
-		console.log("articlesList=", articlesList);
+		console.log("loaded articlesList=", articlesList);
 		return {
 			type: 'LOAD_MORE',
 			data: {
@@ -29,8 +29,5 @@ let actions = {
 		}
 	}
 }
-
-//store.dispatch(loadMore('aa'))
-
 
 export default actions
