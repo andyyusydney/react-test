@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ListItem from './ListItem'
-import actions from '../redux/actions'
+
 
 class ArticlesList extends Component {
 	/*
@@ -29,7 +29,7 @@ class ArticlesList extends Component {
 		}
 	  ];
 	  
-	  this.props.dispatch(actions.loadMore(moreArticles))
+	  this.props.actions.loadMoreAsync(moreArticles)
   }
   
   render() {

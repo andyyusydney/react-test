@@ -1,6 +1,11 @@
-import {createStore} from 'redux'
+import { applyMiddleware, compose, createStore} from 'redux'
 import reducer from './reducer'
+import thunk from 'redux-thunk'
+
+let finalCreateStore = compose(
+	applyMiddleware(thunk)
+)(createStore)
 
 export default function configureStore(initialState = { articles: [] }) {
-	return createStore(reducer, initialState)
+	return finalCreateStore(reducer, initialState)
 }
