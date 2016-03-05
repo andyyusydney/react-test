@@ -37,7 +37,7 @@ app.get('/articles/:page', function (req, res) {
 	//console.log(getConfig('articlesList.json'))
 	var articlesList = getConfig('articlesList.json');
 	
-	var currentPageList = articlesList.slice(pageSize * (page-1), pageSize * page);
+	var currentPageList = articlesList.slice(pageSize * (page-1) + 1, pageSize * page + 1); // start from second item.
 	console.log("currentPageList=", currentPageList);
     res.send(JSON.stringify(currentPageList, null, 3));
 });

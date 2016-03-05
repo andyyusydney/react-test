@@ -9,7 +9,8 @@ let initialState = {
 		id: 1,
 		title: "article title 1",
 		image: "http://placehold.it/300x250&text=image 1"
-	}]
+	}],
+	pageNum: 0
 }
 
 let store = configureStore(initialState)

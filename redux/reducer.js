@@ -4,7 +4,8 @@ let reducer = function(state, action) {
 			//console.log("reach the LOAD_MORE action.");
 			//console.log("action.articlesList=", action.articlesList);
 			let newArticlesList = Object.assign({}, state, {
-				articles: [...state.articles, ...action.articlesList]
+				articles: [...state.articles, ...action.data.articlesList],
+				pageNum: action.data.pageNum
 			});
 			
 			console.log("newArticlesList=", newArticlesList);
