@@ -26,6 +26,9 @@ let actions = {
 					return response.json()
 				})
 				.then(json => dispatch(actions.loadMore(json, pageNum)))
+				.catch(ex => {
+					throw new Error("Error:" + ex);
+				})
 		}
 	}
 }

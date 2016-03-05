@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Redux counter example",
   "scripts": {
-    "test": "mocha --compilers js:babel-register --recursive",
+    "test": "mocha --compilers js:babel-register --recursive --timeout 15000",
     "serve": "nodemon server/server.js --ignore components"
   },
   "repository": {
@@ -33,6 +33,8 @@
     "chai": "^3.5.0",
     "express": "^4.13.4",
     "mocha": "^2.4.5",
+    "nock": "^7.2.2",
+    "redux-mock-store": "0.0.6",
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.9.0"
