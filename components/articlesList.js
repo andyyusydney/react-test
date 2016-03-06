@@ -4,6 +4,7 @@ import ListItem from './ListItem'
 class ArticlesList extends Component {
   
   loadMore() {
+	  /*
 	  let moreArticles = [
 	   {
 			id: 2,
@@ -11,8 +12,10 @@ class ArticlesList extends Component {
 			image: "http://placehold.it/300x250&text=image 2"
 		}
 	  ];
+	  */
 	  
-	  this.props.actions.loadMoreAsync(moreArticles)
+	  //this.props.actions.loadMoreAsync(moreArticles)
+	  this.props.actions.loadMoreAsync()
   }
   
   render() {
